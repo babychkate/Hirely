@@ -10,24 +10,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Hirely.UI;
-
-/// <summary>
-/// Interaction logic for MainWindow.xaml
-/// </summary>
-public partial class MainWindow : Window
+namespace Hirely.UI.Views
 {
-    private RecruitmentViewModel ViewModel => (RecruitmentViewModel)DataContext;
-
-    public MainWindow()
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
-    }
 
-    private void BtnAddVacancy_Click(object sender, RoutedEventArgs e)
-    {
-        // Поки просто повідомлення для перевірки
-        MessageBox.Show("Тут буде форма для додавання вакансії");
-    }
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
+        private void BtnAddVacancy_Click(object sender, RoutedEventArgs e)
+        {
+            // Поки просто повідомлення для перевірки
+            MessageBox.Show("Тут буде форма для додавання вакансії");
+        }
+
+    }
 }

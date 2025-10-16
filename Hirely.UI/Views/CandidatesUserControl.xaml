@@ -1,9 +1,10 @@
 ﻿<UserControl x:Class="Hirely.UI.Views.CandidatesUserControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Name="CandidateControl">
+             Height="Auto" Width="Auto">
     <Grid>
-        <DataGrid ItemsSource="{Binding Candidates, ElementName=CandidateControl}" 
+        <DataGrid ItemsSource="{Binding Candidates, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                  SelectedItem="{Binding SelectedCandidate, RelativeSource={RelativeSource AncestorType=UserControl}, Mode=TwoWay}" 
                   AutoGenerateColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>

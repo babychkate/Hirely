@@ -2,6 +2,7 @@
 using Hirely.Model.Utils;
 using Hirely.UI.Mappers;
 using Hirely.UI.ViewModels;
+using Hirely.UI.Views;
 using Mapster;
 using System.Collections.ObjectModel;
 using System.Configuration;
@@ -28,7 +29,6 @@ public partial class App : Application
         {
             Candidates = recruitmentModel.Candidates.Adapt<ObservableCollection<CandidateViewModel>>(),
             Vacancies = recruitmentModel.Vacancies.Adapt<ObservableCollection<VacancyViewModel>>(),
-            CurrentItems = recruitmentModel.Vacancies.Adapt<ObservableCollection<VacancyViewModel>>()
         };
 
         var window = new MainWindow

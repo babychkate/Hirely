@@ -1,84 +1,79 @@
-﻿<Window x:Class="Hirely.UI.MainWindow"
+﻿<Window x:Class="Hirely.UI.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="clr-namespace:Hirely.UI.ViewModels"
         xmlns:y="clr-namespace:Hirely.UI.Converters"
+        xmlns:vm="clr-namespace:Hirely.UI.ViewModels"
+        xmlns:local="clr-namespace:Hirely.UI.Views"
         Title="Hirely" Height="600" Width="1050">
 
-    <!-- Прив'язка DataContext до ViewModel -->
+    <Window.Resources>
+        <y:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <y:TabToVisibilityConverter x:Key="TabToVisibilityConverter"/>
+    </Window.Resources>
+
+
     <Window.DataContext>
         <vm:RecruitmentViewModel/>
     </Window.DataContext>
 
-    <Window.Resources>
-        <y:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
-    </Window.Resources>
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="170"/>
+            <!-- Ліва панель -->
             <ColumnDefinition Width="*"/>
+            <!-- Права частина -->
         </Grid.ColumnDefinitions>
 
-        <!-- Ліва панель навігації -->
+        <!-- Ліва панель -->
         <StackPanel Grid.Column="0" Background="#5E00FF">
-            <StackPanel Orientation="Horizontal" Height="60" VerticalAlignment="Top" Margin="0,0,0,10">
-                <Image Source="C:\Users\Kateryna\Desktop\Конструювання програмного забезпечення\Hirely\main.jpg" Width="30" Height="30" Margin="10,0">
-                    <Image.Clip>
-                        <EllipseGeometry Center="15,15" RadiusX="15" RadiusY="15"/>
-                    </Image.Clip>
-                </Image>
-                <TextBlock Text="Hirely" VerticalAlignment="Center" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI Variable Small Semibold"/>
-            </StackPanel>
-
-            <!-- Кнопки перемикання табів -->
-            <Button Content="Vacancies" Margin="5" Padding="5"
-                    Foreground="White" Background="Transparent" BorderBrush="Transparent"
-                    HorizontalContentAlignment="Left"
-                    Command="{Binding ShowVacanciesCommand}"/>
-            <Button Content="Candidates" Margin="5" Padding="5"
-                    Foreground="White" Background="Transparent" BorderBrush="Transparent"
-                    HorizontalContentAlignment="Left"
-                    Command="{Binding ShowCandidatesCommand}"/>
+            <TextBlock Text="Hirely" Margin="10" VerticalAlignment="Center" Foreground="White" FontSize="20" FontWeight="Bold"/>
+            <Button Content="Vacancies" Command="{Binding ShowVacanciesCommand}" Margin="5"/>
+            <Button Content="Candidates" Command="{Binding ShowCandidatesCommand}" Margin="5"/>
         </StackPanel>
 
-        <!-- Права частина: DataGrid і бічна панель -->
+        <!-- Права частина -->
         <Grid Grid.Column="1" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+                <!-- UserControl -->
                 <ColumnDefinition Width="350"/>
+                <!-- Панель деталей -->
             </Grid.ColumnDefinitions>
 
-            <!-- Ліва половина: DataGrid + кнопки -->
-            <DockPanel Grid.Column="0" LastChildFill="True" Margin="0,0,10,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Панель кнопок -->
+                <RowDefinition Height="*"/>
+                <!-- UserControl / DataGrid -->
+            </Grid.RowDefinitions>
 
-                <!-- Кнопки -->
-                <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,5,0,0">
-                    <Button Content="Додати вакансію" Width="120" Height="30" Margin="0,0,5,0"
-                            Name="BtnAddVacancy" Click="BtnAddVacancy_Click"/>
-                    <Button Content="Закрити вакансію" Width="120" Height="30"
-                            Command="{Binding CloseVacancyCommand}"/>
-                </StackPanel>
+            <!-- Панель кнопок -->
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,5">
+                <Button Content="Додати вакансію" Width="120" Height="30" Margin="0,0,5,0"/>
+                <Button Content="Закрити вакансію" Width="120" Height="30" Command="{Binding CloseVacancyCommand}"/>
+            </StackPanel>
 
-                <!-- DataGrid, який показує CurrentItems (Vacancies або Candidates) -->
-                <DataGrid ItemsSource="{Binding CurrentItems}" 
-                          SelectedItem="{Binding SelectedItem}" 
-                          AutoGenerateColumns="False" IsReadOnly="True" Margin="0,0,0,5">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
-                        <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
-                        <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+            <local:VacanciesUserControl Grid.Row="1"
+                            Vacancies="{Binding Vacancies}"
+                            SelectedVacancy="{Binding SelectedItem, Mode=TwoWay}"
+                            Visibility="{Binding CurrentTab, Converter={StaticResource TabToVisibilityConverter}, ConverterParameter=Vacancies}"/>
 
-            </DockPanel>
+            <local:CandidatesUserControl Grid.Row="1"
+                             Candidates="{Binding Candidates}"
+                             SelectedCandidate="{Binding SelectedItem, Mode=TwoWay}"
+                             Visibility="{Binding CurrentTab, Converter={StaticResource TabToVisibilityConverter}, ConverterParameter=Candidates}"/>
 
-            <!-- Права половина: бічна панель для деталей -->
-            <Border Grid.Column="1" Background="#F0F0F0" Padding="10" CornerRadius="5"
+
+            <!-- Панель деталей -->
+            <Border Grid.Column="1" Grid.RowSpan="2" Background="#F0F0F0" Padding="10" CornerRadius="5"
                     Visibility="{Binding IsDetailVisible, Converter={StaticResource BoolToVisibilityConverter}}">
                 <StackPanel>
-                    <!-- Можна замінити на UserControl для вакансії або кандидата -->
-                    <TextBlock Text="Details will appear here" FontWeight="Bold" FontSize="16"/>
+                    <TextBlock Text="{Binding SelectedItem.Id, StringFormat=ID: {0}}" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding SelectedItem.Title, StringFormat=Title: {0}}" FontWeight="Bold"
+                               Visibility="{Binding SelectedItem, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=Vacancy}"/>
+                    <TextBlock Text="{Binding SelectedItem.FullName, StringFormat=Full Name: {0}}" FontWeight="Bold"
+                               Visibility="{Binding SelectedItem, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=Candidate}"/>
+                    <TextBlock Text="{Binding SelectedItem.Status, StringFormat=Status: {0}}" FontWeight="Bold"/>
                 </StackPanel>
             </Border>
         </Grid>
