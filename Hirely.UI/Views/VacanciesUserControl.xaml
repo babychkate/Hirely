@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Hirely.UI.Views.VacanciesUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:Hirely.UI.ViewModels"
+             x:Name="VacancyControl">
+    <Grid>
+        <DataGrid ItemsSource="{Binding Vacancies, ElementName=VacancyControl}" 
+                  SelectedItem="{Binding SelectedVacancy, ElementName=VacancyControl}" 
+                  AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

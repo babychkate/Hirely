@@ -1,0 +1,116 @@
+{
+  "Candidates": [
+    {
+      "Id": 1,
+      "FullName": "John Doe",
+      "Status": "Applied"
+    },
+    {
+      "Id": 2,
+      "FullName": "Jane Smith",
+      "Status": "Interview"
+    },
+    {
+      "Id": 3,
+      "FullName": "Alice Johnson",
+      "Status": "Technical"
+    },
+    {
+      "Id": 4,
+      "FullName": "Bob Brown",
+      "Status": "Applied"
+    },
+    {
+      "Id": 5,
+      "FullName": "Emily Davis",
+      "Status": "Interview"
+    },
+    {
+      "Id": 6,
+      "FullName": "Michael Wilson",
+      "Status": "Technical"
+    },
+    {
+      "Id": 7,
+      "FullName": "Olivia Taylor",
+      "Status": "Applied"
+    },
+    {
+      "Id": 8,
+      "FullName": "William Moore",
+      "Status": "Interview"
+    },
+    {
+      "Id": 9,
+      "FullName": "Sophia Anderson",
+      "Status": "Technical"
+    },
+    {
+      "Id": 10,
+      "FullName": "James Thomas",
+      "Status": "Applied"
+    }
+  ],
+  "Vacancies": [
+    {
+      "Id": 1,
+      "Title": "Software Engineer",
+      "Department": null,
+      "Status": "Closed"
+    },
+    {
+      "Id": 2,
+      "Title": "HR Manager",
+      "Department": null,
+      "Status": "Closed"
+    },
+    {
+      "Id": 3,
+      "Title": "UX Designer",
+      "Department": null,
+      "Status": "Closed"
+    },
+    {
+      "Id": 4,
+      "Title": "DevOps Engineer",
+      "Department": null,
+      "Status": "Open"
+    },
+    {
+      "Id": 5,
+      "Title": "Product Manager",
+      "Department": null,
+      "Status": "In Progress"
+    },
+    {
+      "Id": 6,
+      "Title": "QA Engineer",
+      "Department": null,
+      "Status": "Open"
+    },
+    {
+      "Id": 7,
+      "Title": "Marketing Specialist",
+      "Department": null,
+      "Status": "Closed"
+    },
+    {
+      "Id": 8,
+      "Title": "Data Analyst",
+      "Department": null,
+      "Status": "Closed"
+    },
+    {
+      "Id": 9,
+      "Title": "Business Analyst",
+      "Department": null,
+      "Status": "In Progress"
+    },
+    {
+      "Id": 10,
+      "Title": "Customer Support",
+      "Department": null,
+      "Status": "Open"
+    }
+  ]
+}
