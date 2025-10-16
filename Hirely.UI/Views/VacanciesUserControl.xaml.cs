@@ -42,7 +42,6 @@ namespace Hirely.UI.Views
             {
                 SetValue(SelectedVacancyProperty, value);
                 OnPropertyChanged(nameof(SelectedVacancy));
-                // Можна викликати додаткову логіку, наприклад:
                 SelectedVacancyChanged?.Invoke(this, value);
             }
         }

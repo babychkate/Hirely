@@ -34,7 +34,6 @@ namespace Hirely.UI.Views
             }
         }
 
-        // Вибраний кандидат
         public static readonly DependencyProperty SelectedCandidateProperty =
             DependencyProperty.Register(nameof(SelectedCandidate),
                 typeof(CandidateViewModel),

@@ -53,6 +53,10 @@ namespace Hirely.UI.ViewModels
             }
         }
 
+        // Нова властивість для підрахунку незакритих вакансій
+        public int OpenVacanciesCount =>
+            Vacancies.Count(v => v.Status != VacancyStatus.Closed.ToString());
+
         // Чи вибрана вакансія (для кнопки)
         public bool IsVacancyToClose => SelectedItem is VacancyViewModel v && v.Status != VacancyStatus.Closed.ToString();
 
@@ -63,6 +67,7 @@ namespace Hirely.UI.ViewModels
             {
                 if (SelectedItem is VacancyViewModel vacancy)
                     vacancy.Status = VacancyStatus.Closed.ToString();
+                OnPropertyChanged(nameof(OpenVacanciesCount));
             },
             () => IsVacancyToClose
         );
@@ -76,6 +81,7 @@ namespace Hirely.UI.ViewModels
             {
                 if (SelectedItem is VacancyViewModel vacancy)
                     vacancy.Status = "Open";
+                OnPropertyChanged(nameof(OpenVacanciesCount));
             },
             () => IsVacancyToOpen
         );
