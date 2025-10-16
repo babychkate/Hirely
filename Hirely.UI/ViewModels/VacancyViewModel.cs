@@ -1,13 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace Hirely.UI.ViewModels
 {
     public class VacancyViewModel : ViewModelBase
     {
+        public VacancyViewModel()
+        {
+            Candidates = new ObservableCollection<CandidateViewModel>();
+        }
+
         private int _id;
         public int Id
         {
@@ -32,6 +33,20 @@ namespace Hirely.UI.ViewModels
                 {
                     _title = value;
                     OnPropertyChanged(nameof(Title));
+                }
+            }
+        }
+
+        private string _technologies = string.Empty;
+        public string Technologies
+        {
+            get => _technologies;
+            set
+            {
+                if (_technologies != value)
+                {
+                    _technologies = value;
+                    OnPropertyChanged(nameof(Technologies));
                 }
             }
         }
@@ -64,6 +79,15 @@ namespace Hirely.UI.ViewModels
             }
         }
 
-    }
-}
+        public ObservableCollection<CandidateViewModel> Candidates { get; set; }
 
+        public int CandidateCount => Candidates?.Count ?? 0;
+
+        public void RefreshCandidates()
+        {
+            OnPropertyChanged(nameof(Candidates));
+            OnPropertyChanged(nameof(CandidateCount));
+        }
+    }
+
+}

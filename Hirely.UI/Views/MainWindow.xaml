@@ -1,21 +1,11 @@
-﻿<Window x:Class="Hirely.UI.Views.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:y="clr-namespace:Hirely.UI.Converters"
-        xmlns:vm="clr-namespace:Hirely.UI.ViewModels"
-        xmlns:local="clr-namespace:Hirely.UI.Views"
-        Title="Hirely" Height="600" Width="1050">
-
+﻿<Window x:Class="Hirely.UI.Views.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:y="clr-namespace:Hirely.UI.Converters" xmlns:vm="clr-namespace:Hirely.UI.ViewModels" xmlns:local="clr-namespace:Hirely.UI.Views" Title="Hirely" Height="600" Width="1050">
     <Window.Resources>
         <y:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
         <y:TabToVisibilityConverter x:Key="TabToVisibilityConverter"/>
     </Window.Resources>
-
-
     <Window.DataContext>
         <vm:RecruitmentViewModel/>
     </Window.DataContext>
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="170"/>
@@ -23,14 +13,12 @@
             <ColumnDefinition Width="*"/>
             <!-- Права частина -->
         </Grid.ColumnDefinitions>
-
         <!-- Ліва панель -->
         <StackPanel Grid.Column="0" Background="#5E00FF">
             <TextBlock Text="Hirely" Margin="10" VerticalAlignment="Center" Foreground="White" FontSize="20" FontWeight="Bold"/>
             <Button Content="Vacancies" Command="{Binding ShowVacanciesCommand}" Margin="5"/>
             <Button Content="Candidates" Command="{Binding ShowCandidatesCommand}" Margin="5"/>
         </StackPanel>
-
         <!-- Права частина -->
         <Grid Grid.Column="1" Margin="10">
             <Grid.ColumnDefinitions>
@@ -39,43 +27,37 @@
                 <ColumnDefinition Width="350"/>
                 <!-- Панель деталей -->
             </Grid.ColumnDefinitions>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <!-- Панель кнопок -->
                 <RowDefinition Height="*"/>
                 <!-- UserControl / DataGrid -->
             </Grid.RowDefinitions>
-
             <!-- Панель кнопок -->
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,5">
                 <Button Content="Додати вакансію" Width="120" Height="30" Margin="0,0,5,0"/>
                 <Button Content="Закрити вакансію" Width="120" Height="30" Command="{Binding CloseVacancyCommand}"/>
             </StackPanel>
-
-            <local:VacanciesUserControl Grid.Row="1"
-                            Vacancies="{Binding Vacancies}"
-                            SelectedVacancy="{Binding SelectedItem, Mode=TwoWay}"
-                            Visibility="{Binding CurrentTab, Converter={StaticResource TabToVisibilityConverter}, ConverterParameter=Vacancies}"/>
-
-            <local:CandidatesUserControl Grid.Row="1"
-                             Candidates="{Binding Candidates}"
-                             SelectedCandidate="{Binding SelectedItem, Mode=TwoWay}"
-                             Visibility="{Binding CurrentTab, Converter={StaticResource TabToVisibilityConverter}, ConverterParameter=Candidates}"/>
-
-
+            <local:VacanciesUserControl Grid.Row="1" Vacancies="{Binding Vacancies}" SelectedVacancy="{Binding SelectedItem, Mode=TwoWay}" Visibility="{Binding CurrentTab, Converter={StaticResource TabToVisibilityConverter}, ConverterParameter=Vacancies}"/>
+            <local:CandidatesUserControl Grid.Row="1" Candidates="{Binding Candidates}" SelectedCandidate="{Binding SelectedItem, Mode=TwoWay}" Visibility="{Binding CurrentTab, Converter={StaticResource TabToVisibilityConverter}, ConverterParameter=Candidates}"/>
             <!-- Панель деталей -->
             <Border Grid.Column="1" Grid.RowSpan="2" Background="#F0F0F0" Padding="10" CornerRadius="5"
-                    Visibility="{Binding IsDetailVisible, Converter={StaticResource BoolToVisibilityConverter}}">
-                <StackPanel>
-                    <TextBlock Text="{Binding SelectedItem.Id, StringFormat=ID: {0}}" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding SelectedItem.Title, StringFormat=Title: {0}}" FontWeight="Bold"
-                               Visibility="{Binding SelectedItem, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=Vacancy}"/>
-                    <TextBlock Text="{Binding SelectedItem.FullName, StringFormat=Full Name: {0}}" FontWeight="Bold"
-                               Visibility="{Binding SelectedItem, Converter={StaticResource BoolToVisibilityConverter}, ConverterParameter=Candidate}"/>
-                    <TextBlock Text="{Binding SelectedItem.Status, StringFormat=Status: {0}}" FontWeight="Bold"/>
-                </StackPanel>
+        Visibility="{Binding IsDetailVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                <ContentControl Content="{Binding SelectedItem}">
+                    <ContentControl.Resources>
+                        <!-- Деталі вакансії -->
+                        <DataTemplate DataType="{x:Type vm:VacancyViewModel}">
+                            <local:VacancyDetailsUserControl DataContext="{Binding}"/>
+                        </DataTemplate>
+
+                        <!-- Деталі кандидата -->
+                        <DataTemplate DataType="{x:Type vm:CandidateViewModel}">
+                            <local:CandidateDetailsUserControl DataContext="{Binding}"/>
+                        </DataTemplate>
+                    </ContentControl.Resources>
+                </ContentControl>
             </Border>
+
         </Grid>
     </Grid>
 </Window>

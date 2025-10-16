@@ -6,12 +6,16 @@ using System.Windows.Controls;
 
 namespace Hirely.UI.Views
 {
-    public partial class CandidatesUserControl : UserControl
+    public partial class CandidatesUserControl : UserControl, INotifyPropertyChanged
     {
         public CandidatesUserControl()
         {
             InitializeComponent();
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string name) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
         // Колекція кандидатів
         public static readonly DependencyProperty CandidatesProperty =
@@ -23,7 +27,11 @@ namespace Hirely.UI.Views
         public ObservableCollection<CandidateViewModel> Candidates
         {
             get => (ObservableCollection<CandidateViewModel>)GetValue(CandidatesProperty);
-            set => SetValue(CandidatesProperty, value);
+            set
+            {
+                SetValue(CandidatesProperty, value);
+                OnPropertyChanged(nameof(Candidates));
+            }
         }
 
         // Вибраний кандидат
@@ -36,7 +44,11 @@ namespace Hirely.UI.Views
         public CandidateViewModel SelectedCandidate
         {
             get => (CandidateViewModel)GetValue(SelectedCandidateProperty);
-            set => SetValue(SelectedCandidateProperty, value);
+            set
+            {
+                SetValue(SelectedCandidateProperty, value);
+                OnPropertyChanged(nameof(SelectedCandidate));
+            }
         }
     }
 }

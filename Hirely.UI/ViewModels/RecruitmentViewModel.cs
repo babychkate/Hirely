@@ -1,6 +1,7 @@
 ﻿using Hirely.Model.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace Hirely.UI.ViewModels
 {
@@ -50,6 +51,28 @@ namespace Hirely.UI.ViewModels
             },
             () => IsVacancySelected
         );
+
+        // Команда найму кандидата
+        private Command _hireCandidateCommand;
+        public Command HireCandidateCommand => _hireCandidateCommand ??= new Command(
+     () =>
+     {
+         if (SelectedItem is CandidateViewModel candidate && CurrentTab == TabType.Candidates)
+         {
+             candidate.Status = CandidateStatus.Onboarding.ToString();
+
+             // Додаємо кандидата до першої вакансії, де він ще не присутній
+             var vacancy = Vacancies.FirstOrDefault(v => !v.Candidates.Any(c => c.Id == candidate.Id));
+             if (vacancy != null)
+             {
+                 vacancy.Candidates.Add(candidate);
+                 vacancy.RefreshCandidates();
+             }
+         }
+     },
+     () => SelectedItem is CandidateViewModel
+ );
+
 
         // Табс
         public enum TabType { Vacancies, Candidates }

@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Hirely.UI.Views.VacancyDetailsUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:Hirely.UI.ViewModels"
+             Height="400" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Дані вакансії -->
+            <RowDefinition Height="*"/>
+            <!-- Список кандидатів -->
+        </Grid.RowDefinitions>
+
+        <!-- Інформація про вакансію -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock Text="Title:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Title}" Margin="0,0,0,5"/>
+
+            <TextBlock Text="Department:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Department}" Margin="0,0,0,5"/>
+
+            <TextBlock Text="Technologies:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Technologies}" Margin="0,0,0,5"/>
+
+            <TextBlock Text="Status:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding Status}" Margin="0,0,0,5"/>
+
+            <TextBlock Text="Number of Candidates:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding CandidateCount}" Margin="0,0,0,5"/>
+        </StackPanel>
+
+        <!-- Список кандидатів -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" MaxHeight="300" MaxWidth="480">
+            <DataGrid ItemsSource="{Binding Candidates}" AutoGenerateColumns="False"
+              CanUserAddRows="False" IsReadOnly="True"
+              HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="120"/>
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="80"/>
+                    <DataGridTextColumn Header="Level" Binding="{Binding Level}" Width="60"/>
+                    <DataGridTemplateColumn Header="Actions" Width="100">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Hire"
+                                Command="{Binding DataContext.HireCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                CommandParameter="{Binding}" Padding="2" Margin="0"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

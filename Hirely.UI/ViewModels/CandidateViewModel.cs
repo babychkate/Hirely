@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hirely.UI.ViewModels
 {
@@ -22,15 +18,15 @@ namespace Hirely.UI.ViewModels
             }
         }
 
-        private string _fullname = string.Empty;
+        private string _fullName = string.Empty;
         public string FullName
         {
-            get => _fullname;
+            get => _fullName;
             set
             {
-                if (_fullname != value)
+                if (_fullName != value)
                 {
-                    _fullname = value;
+                    _fullName = value;
                     OnPropertyChanged(nameof(FullName));
                 }
             }
@@ -48,6 +44,77 @@ namespace Hirely.UI.ViewModels
                     OnPropertyChanged(nameof(Status));
                 }
             }
+        }
+
+        // Нові поля
+        private string _phoneNumber = string.Empty;
+        public string PhoneNumber
+        {
+            get => _phoneNumber;
+            set
+            {
+                if (_phoneNumber != value)
+                {
+                    _phoneNumber = value;
+                    OnPropertyChanged(nameof(PhoneNumber));
+                }
+            }
+        }
+
+        private string _photoPath = string.Empty;
+        public string PhotoPath
+        {
+            get => _photoPath;
+            set
+            {
+                if (_photoPath != value)
+                {
+                    _photoPath = value;
+                    OnPropertyChanged(nameof(PhotoPath));
+                }
+            }
+        }
+
+        private string _level = "Junior";
+        public string Level
+        {
+            get => _level;
+            set
+            {
+                if (_level != value)
+                {
+                    _level = value;
+                    OnPropertyChanged(nameof(Level));
+                }
+            }
+        }
+
+        private string _resumeLink = string.Empty;
+        public string ResumeLink
+        {
+            get => _resumeLink;
+            set
+            {
+                if (_resumeLink != value)
+                {
+                    _resumeLink = value;
+                    OnPropertyChanged(nameof(ResumeLink));
+                }
+            }
+        }
+
+        // Конструктор за бажанням для швидкого створення
+        public CandidateViewModel() { }
+
+        public CandidateViewModel(Hirely.Model.Models.Candidate model)
+        {
+            Id = model.Id;
+            FullName = model.FullName;
+            Status = model.Status;
+            PhoneNumber = model.PhoneNumber;
+            PhotoPath = model.PhotoPath;
+            Level = model.Level;
+            ResumeLink = model.ResumeLink;
         }
     }
 }

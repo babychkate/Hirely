@@ -1,12 +1,17 @@
 ﻿using Hirely.UI.ViewModels;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 
 namespace Hirely.UI.Views
 {
-    public partial class VacanciesUserControl : UserControl
+    public partial class VacanciesUserControl : UserControl, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string name) =>
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
         public VacanciesUserControl()
         {
             InitializeComponent();
@@ -33,7 +38,15 @@ namespace Hirely.UI.Views
         public VacancyViewModel SelectedVacancy
         {
             get => (VacancyViewModel)GetValue(SelectedVacancyProperty);
-            set => SetValue(SelectedVacancyProperty, value);
+            set
+            {
+                SetValue(SelectedVacancyProperty, value);
+                OnPropertyChanged(nameof(SelectedVacancy));
+                // Можна викликати додаткову логіку, наприклад:
+                SelectedVacancyChanged?.Invoke(this, value);
+            }
         }
+
+        public event EventHandler<VacancyViewModel> SelectedVacancyChanged;
     }
 }

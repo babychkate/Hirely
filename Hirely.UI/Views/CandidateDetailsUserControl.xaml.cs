@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Hirely.UI.Views
 {
     /// <summary>
-    /// Interaction logic for DashboardUserControl.xaml
+    /// Interaction logic for CandidateDetailsUserControl.xaml
     /// </summary>
-    public partial class DashboardUserControl : UserControl
+    public partial class CandidateDetailsUserControl : UserControl
     {
-        public DashboardUserControl()
+        public CandidateDetailsUserControl()
         {
             InitializeComponent();
         }

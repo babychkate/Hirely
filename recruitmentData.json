@@ -3,114 +3,309 @@
     {
       "Id": 1,
       "FullName": "John Doe",
-      "Status": "Applied"
+      "Status": "Applied",
+      "PhoneNumber": "\u002B380501234567",
+      "PhotoPath": "Images/JohnDoe.jpg",
+      "Level": "Junior",
+      "ResumeLink": "Resumes/JohnDoe.pdf"
     },
     {
       "Id": 2,
       "FullName": "Jane Smith",
-      "Status": "Interview"
+      "Status": "Interview",
+      "PhoneNumber": "\u002B380501112233",
+      "PhotoPath": "Images/JaneSmith.jpg",
+      "Level": "Middle",
+      "ResumeLink": "Resumes/JaneSmith.pdf"
     },
     {
       "Id": 3,
       "FullName": "Alice Johnson",
-      "Status": "Technical"
+      "Status": "Technical",
+      "PhoneNumber": "\u002B380509876543",
+      "PhotoPath": "Images/AliceJohnson.jpg",
+      "Level": "Junior",
+      "ResumeLink": "Resumes/AliceJohnson.pdf"
     },
     {
       "Id": 4,
       "FullName": "Bob Brown",
-      "Status": "Applied"
+      "Status": "Applied",
+      "PhoneNumber": "\u002B380503334455",
+      "PhotoPath": "Images/BobBrown.jpg",
+      "Level": "Senior",
+      "ResumeLink": "Resumes/BobBrown.pdf"
     },
     {
       "Id": 5,
       "FullName": "Emily Davis",
-      "Status": "Interview"
+      "Status": "Interview",
+      "PhoneNumber": "\u002B380504556677",
+      "PhotoPath": "Images/EmilyDavis.jpg",
+      "Level": "Middle",
+      "ResumeLink": "Resumes/EmilyDavis.pdf"
     },
     {
       "Id": 6,
       "FullName": "Michael Wilson",
-      "Status": "Technical"
+      "Status": "Technical",
+      "PhoneNumber": "\u002B380505667788",
+      "PhotoPath": "Images/MichaelWilson.jpg",
+      "Level": "Junior",
+      "ResumeLink": "Resumes/MichaelWilson.pdf"
     },
     {
       "Id": 7,
       "FullName": "Olivia Taylor",
-      "Status": "Applied"
+      "Status": "Applied",
+      "PhoneNumber": "\u002B380506778899",
+      "PhotoPath": "Images/OliviaTaylor.jpg",
+      "Level": "Middle",
+      "ResumeLink": "Resumes/OliviaTaylor.pdf"
     },
     {
       "Id": 8,
       "FullName": "William Moore",
-      "Status": "Interview"
+      "Status": "Interview",
+      "PhoneNumber": "\u002B380507889900",
+      "PhotoPath": "Images/WilliamMoore.jpg",
+      "Level": "Senior",
+      "ResumeLink": "Resumes/WilliamMoore.pdf"
     },
     {
       "Id": 9,
       "FullName": "Sophia Anderson",
-      "Status": "Technical"
+      "Status": "Technical",
+      "PhoneNumber": "\u002B380508990011",
+      "PhotoPath": "Images/SophiaAnderson.jpg",
+      "Level": "Junior",
+      "ResumeLink": "Resumes/SophiaAnderson.pdf"
     },
     {
       "Id": 10,
       "FullName": "James Thomas",
-      "Status": "Applied"
+      "Status": "Applied",
+      "PhoneNumber": "\u002B380509001122",
+      "PhotoPath": "Images/JamesThomas.jpg",
+      "Level": "Middle",
+      "ResumeLink": "Resumes/JamesThomas.pdf"
+    },
+    {
+      "Id": 11,
+      "FullName": "Mark Spencer",
+      "Status": "Applied",
+      "PhoneNumber": "\u002B380501112233",
+      "PhotoPath": "Images/MarkSpencer.png",
+      "Level": "Junior",
+      "ResumeLink": "Resumes/MarkSpencer.pdf"
+    },
+    {
+      "Id": 12,
+      "FullName": "Linda Roberts",
+      "Status": "Interview",
+      "PhoneNumber": "\u002B380501122334",
+      "PhotoPath": "Images/LindaRoberts.png",
+      "Level": "Junior",
+      "ResumeLink": "Resumes/LindaRoberts.pdf"
     }
   ],
   "Vacancies": [
     {
       "Id": 1,
       "Title": "Software Engineer",
-      "Department": null,
-      "Status": "Closed"
+      "Technologies": "C#, .NET, WPF",
+      "Department": "Development",
+      "Status": "InProgress",
+      "Candidates": [
+        {
+          "Id": 1,
+          "FullName": "John Doe",
+          "Status": "Applied",
+          "PhoneNumber": "\u002B380501234567",
+          "PhotoPath": "Images/JohnDoe.jpg",
+          "Level": "Junior",
+          "ResumeLink": "Resumes/JohnDoe.pdf"
+        },
+        {
+          "Id": 3,
+          "FullName": "Alice Johnson",
+          "Status": "Technical",
+          "PhoneNumber": "\u002B380509876543",
+          "PhotoPath": "Images/AliceJohnson.jpg",
+          "Level": "Junior",
+          "ResumeLink": "Resumes/AliceJohnson.pdf"
+        }
+      ]
     },
     {
       "Id": 2,
       "Title": "HR Manager",
-      "Department": null,
-      "Status": "Closed"
+      "Technologies": "Recruiting, Interviews",
+      "Department": "HR",
+      "Status": "Closed",
+      "Candidates": [
+        {
+          "Id": 2,
+          "FullName": "Jane Smith",
+          "Status": "Interview",
+          "PhoneNumber": "\u002B380501112233",
+          "PhotoPath": "Images/JaneSmith.jpg",
+          "Level": "Middle",
+          "ResumeLink": "Resumes/JaneSmith.pdf"
+        }
+      ]
     },
     {
       "Id": 3,
       "Title": "UX Designer",
-      "Department": null,
-      "Status": "Closed"
+      "Technologies": "Figma, Adobe XD",
+      "Department": "Design",
+      "Status": "InProgress",
+      "Candidates": [
+        {
+          "Id": 5,
+          "FullName": "Emily Davis",
+          "Status": "Interview",
+          "PhoneNumber": "\u002B380504556677",
+          "PhotoPath": "Images/EmilyDavis.jpg",
+          "Level": "Middle",
+          "ResumeLink": "Resumes/EmilyDavis.pdf"
+        }
+      ]
     },
     {
       "Id": 4,
       "Title": "DevOps Engineer",
-      "Department": null,
-      "Status": "Closed"
+      "Technologies": "AWS, Docker, CI/CD",
+      "Department": "Infrastructure",
+      "Status": "Open",
+      "Candidates": [
+        {
+          "Id": 6,
+          "FullName": "Michael Wilson",
+          "Status": "Technical",
+          "PhoneNumber": "\u002B380505667788",
+          "PhotoPath": "Images/MichaelWilson.jpg",
+          "Level": "Junior",
+          "ResumeLink": "Resumes/MichaelWilson.pdf"
+        }
+      ]
     },
     {
       "Id": 5,
       "Title": "Product Manager",
-      "Department": null,
-      "Status": "In Progress"
+      "Technologies": "Agile, Scrum",
+      "Department": "Product",
+      "Status": "InProgress",
+      "Candidates": [
+        {
+          "Id": 4,
+          "FullName": "Bob Brown",
+          "Status": "Applied",
+          "PhoneNumber": "\u002B380503334455",
+          "PhotoPath": "Images/BobBrown.jpg",
+          "Level": "Senior",
+          "ResumeLink": "Resumes/BobBrown.pdf"
+        }
+      ]
     },
     {
       "Id": 6,
       "Title": "QA Engineer",
-      "Department": null,
-      "Status": "Open"
+      "Technologies": "Selenium, C#",
+      "Department": "QA",
+      "Status": "Open",
+      "Candidates": [
+        {
+          "Id": 7,
+          "FullName": "Olivia Taylor",
+          "Status": "Applied",
+          "PhoneNumber": "\u002B380506778899",
+          "PhotoPath": "Images/OliviaTaylor.jpg",
+          "Level": "Middle",
+          "ResumeLink": "Resumes/OliviaTaylor.pdf"
+        },
+        {
+          "Id": 11,
+          "FullName": "Mark Spencer",
+          "Status": "Applied",
+          "PhoneNumber": "\u002B380501112233",
+          "PhotoPath": "Images/MarkSpencer.png",
+          "Level": "Junior",
+          "ResumeLink": "Resumes/MarkSpencer.pdf"
+        }
+      ]
     },
     {
       "Id": 7,
       "Title": "Marketing Specialist",
-      "Department": null,
-      "Status": "Closed"
+      "Technologies": "SEO, SMM",
+      "Department": "Marketing",
+      "Status": "Closed",
+      "Candidates": [
+        {
+          "Id": 8,
+          "FullName": "William Moore",
+          "Status": "Interview",
+          "PhoneNumber": "\u002B380507889900",
+          "PhotoPath": "Images/WilliamMoore.jpg",
+          "Level": "Senior",
+          "ResumeLink": "Resumes/WilliamMoore.pdf"
+        },
+        {
+          "Id": 12,
+          "FullName": "Linda Roberts",
+          "Status": "Interview",
+          "PhoneNumber": "\u002B380501122334",
+          "PhotoPath": "Images/LindaRoberts.png",
+          "Level": "Junior",
+          "ResumeLink": "Resumes/LindaRoberts.pdf"
+        }
+      ]
     },
     {
       "Id": 8,
       "Title": "Data Analyst",
-      "Department": null,
-      "Status": "Closed"
+      "Technologies": "SQL, Python, Excel",
+      "Department": "Analytics",
+      "Status": "Closed",
+      "Candidates": [
+        {
+          "Id": 9,
+          "FullName": "Sophia Anderson",
+          "Status": "Technical",
+          "PhoneNumber": "\u002B380508990011",
+          "PhotoPath": "Images/SophiaAnderson.jpg",
+          "Level": "Junior",
+          "ResumeLink": "Resumes/SophiaAnderson.pdf"
+        }
+      ]
     },
     {
       "Id": 9,
       "Title": "Business Analyst",
-      "Department": null,
-      "Status": "In Progress"
+      "Technologies": "Business Analysis, BPM",
+      "Department": "Product",
+      "Status": "InProgress",
+      "Candidates": [
+        {
+          "Id": 10,
+          "FullName": "James Thomas",
+          "Status": "Applied",
+          "PhoneNumber": "\u002B380509001122",
+          "PhotoPath": "Images/JamesThomas.jpg",
+          "Level": "Middle",
+          "ResumeLink": "Resumes/JamesThomas.pdf"
+        }
+      ]
     },
     {
       "Id": 10,
       "Title": "Customer Support",
-      "Department": null,
-      "Status": "Open"
+      "Technologies": "CRM, Zendesk",
+      "Department": "Support",
+      "Status": "Open",
+      "Candidates": []
     }
   ]
 }
