@@ -1,8 +1,69 @@
 ﻿<Application x:Class="Hirely.UI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Hirely.UI">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>
-         
+        <Color x:Key="PrimaryColor">#5D3FD3</Color>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource PrimaryColor}"/>
+
+        <Color x:Key="SecondaryTextColor">#333333</Color>
+        <SolidColorBrush x:Key="SecondaryTextBrush" Color="{StaticResource SecondaryTextColor}"/>
+        <Color x:Key="LightGrayBackground">#F5F7FA</Color>
+        <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGrayBackground}"/>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10, 5"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#4B2AA6"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="RowBackground" Value="White"/>
+            <Setter Property="AlternatingRowBackground" Value="{StaticResource LightGrayBrush}"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#E0E0E0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="SelectionUnit" Value="FullRow"/>
+        </Style>
+
+        <Style TargetType="DataGridRow">
+            <Style.Resources>
+                <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="{StaticResource PrimaryColor}" Opacity="0.4"/>
+                <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="{StaticResource PrimaryColor}" Opacity="0.1"/>
+            </Style.Resources>
+            <Setter Property="Foreground" Value="{StaticResource SecondaryTextBrush}"/>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="{StaticResource SecondaryTextBrush}"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderThickness" Value="0,0,0,2"/>
+            <Setter Property="BorderBrush" Value="#E0E0E0"/>
+        </Style>
+
     </Application.Resources>
 </Application>

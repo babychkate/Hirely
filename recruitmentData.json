@@ -139,7 +139,7 @@
       "Title": "Software Engineer",
       "Technologies": "C#, .NET, WPF",
       "Department": "Development",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 1,
@@ -170,7 +170,7 @@
       "Title": "HR Manager",
       "Technologies": "Recruiting, Interviews",
       "Department": "HR",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 2,
@@ -312,7 +312,7 @@
       "Title": "Data Analyst",
       "Technologies": "SQL, Python, Excel",
       "Department": "Analytics",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 9,
