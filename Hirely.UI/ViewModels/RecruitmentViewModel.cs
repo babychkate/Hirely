@@ -20,9 +20,24 @@ namespace Hirely.UI.ViewModels
             {
                 _selectedItem = value;
                 OnPropertyChanged(nameof(SelectedItem));
-                OnPropertyChanged(nameof(IsVacancySelected));
+                OnPropertyChanged(nameof(IsVacancyToClose));
+                OnPropertyChanged(nameof(IsVacancyToOpen));
                 IsDetailVisible = _selectedItem != null;
+                OpenVacancyCommand.RaiseCanExecuteChanged();
                 CloseVacancyCommand.RaiseCanExecuteChanged();
+            }
+        }
+
+        private VacancyViewModel _selectedVacancy;
+        public VacancyViewModel SelectedVacancy
+        {
+            get => _selectedVacancy;
+            set
+            {
+                _selectedVacancy = value;
+                OnPropertyChanged(nameof(SelectedVacancy));
+                OnPropertyChanged(nameof(IsVacancyToClose));
+                OnPropertyChanged(nameof(IsVacancyToOpen));
             }
         }
 
@@ -39,7 +54,7 @@ namespace Hirely.UI.ViewModels
         }
 
         // Чи вибрана вакансія (для кнопки)
-        public bool IsVacancySelected => SelectedItem is VacancyViewModel v && v.Status != VacancyStatus.Closed.ToString();
+        public bool IsVacancyToClose => SelectedItem is VacancyViewModel v && v.Status != VacancyStatus.Closed.ToString();
 
         // Закрити вакансію
         private Command _closeVacancyCommand;
@@ -49,30 +64,21 @@ namespace Hirely.UI.ViewModels
                 if (SelectedItem is VacancyViewModel vacancy)
                     vacancy.Status = VacancyStatus.Closed.ToString();
             },
-            () => IsVacancySelected
+            () => IsVacancyToClose
         );
 
-        // Команда найму кандидата
-        private Command _hireCandidateCommand;
-        public Command HireCandidateCommand => _hireCandidateCommand ??= new Command(
-     () =>
-     {
-         if (SelectedItem is CandidateViewModel candidate && CurrentTab == TabType.Candidates)
-         {
-             candidate.Status = CandidateStatus.Onboarding.ToString();
+        public bool IsVacancyToOpen => SelectedItem is VacancyViewModel v && v.Status == VacancyStatus.Closed.ToString();
 
-             // Додаємо кандидата до першої вакансії, де він ще не присутній
-             var vacancy = Vacancies.FirstOrDefault(v => !v.Candidates.Any(c => c.Id == candidate.Id));
-             if (vacancy != null)
-             {
-                 vacancy.Candidates.Add(candidate);
-                 vacancy.RefreshCandidates();
-             }
-         }
-     },
-     () => SelectedItem is CandidateViewModel
- );
-
+        // Закрити вакансію
+        private Command _openVacancyCommand;
+        public Command OpenVacancyCommand => _openVacancyCommand ??= new Command(
+            () =>
+            {
+                if (SelectedItem is VacancyViewModel vacancy)
+                    vacancy.Status = "Open";
+            },
+            () => IsVacancyToOpen
+        );
 
         // Табс
         public enum TabType { Vacancies, Candidates }

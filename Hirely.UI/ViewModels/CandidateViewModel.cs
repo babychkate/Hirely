@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hirely.UI.Views;
+using System;
+using System.Windows.Input;
 
 namespace Hirely.UI.ViewModels
 {
@@ -103,8 +105,28 @@ namespace Hirely.UI.ViewModels
             }
         }
 
-        // Конструктор за бажанням для швидкого створення
-        public CandidateViewModel() { }
+        public ICommand ViewResumeCommand { get; }
+
+        public CandidateViewModel()
+        {
+            ViewResumeCommand = new Command(OpenResume, CanOpenResume);
+        }
+
+        private void OpenResume()
+        {
+            if (!string.IsNullOrEmpty(ResumeLink))
+            {
+                // Відкриваємо нове вікно для перегляду PDF
+                var resumeWindow = new ResumeWindow(ResumeLink);
+                resumeWindow.Show();
+            }
+        }
+
+        private bool CanOpenResume()
+        {
+            // Команда доступна, якщо ResumeLink не порожній
+            return !string.IsNullOrEmpty(ResumeLink);
+        }
 
         public CandidateViewModel(Hirely.Model.Models.Candidate model)
         {

@@ -30,26 +30,20 @@
         </StackPanel>
 
         <!-- Список кандидатів -->
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" MaxHeight="300" MaxWidth="480">
-            <DataGrid ItemsSource="{Binding Candidates}" AutoGenerateColumns="False"
-              CanUserAddRows="False" IsReadOnly="True"
-              HorizontalAlignment="Stretch" VerticalAlignment="Top">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="120"/>
-                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="80"/>
-                    <DataGridTextColumn Header="Level" Binding="{Binding Level}" Width="60"/>
-                    <DataGridTemplateColumn Header="Actions" Width="100">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Hire"
-                                Command="{Binding DataContext.HireCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" 
-                                CommandParameter="{Binding}" Padding="2" Margin="0"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-        </ScrollViewer>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding Candidates}" AutoGenerateColumns="False"
+          CanUserAddRows="False" IsReadOnly="True"
+          MaxHeight="300" Width="320"
+          HorizontalAlignment="Left" VerticalAlignment="Top"
+          ColumnWidth="*"
+          HeadersVisibility="Column"
+          GridLinesVisibility="Horizontal">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="120"/>
+                <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
+                <DataGridTextColumn Header="Level" Binding="{Binding Level}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
 
     </Grid>
 </UserControl>

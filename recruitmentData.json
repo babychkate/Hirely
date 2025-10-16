@@ -3,110 +3,134 @@
     {
       "Id": 1,
       "FullName": "John Doe",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Applied",
       "PhoneNumber": "\u002B380501234567",
-      "PhotoPath": "Images/JohnDoe.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar10.jpg",
       "Level": "Junior",
-      "ResumeLink": "Resumes/JohnDoe.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
     },
     {
       "Id": 2,
       "FullName": "Jane Smith",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Interview",
       "PhoneNumber": "\u002B380501112233",
-      "PhotoPath": "Images/JaneSmith.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar2.jpg",
       "Level": "Middle",
-      "ResumeLink": "Resumes/JaneSmith.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
     },
     {
       "Id": 3,
       "FullName": "Alice Johnson",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Technical",
       "PhoneNumber": "\u002B380509876543",
-      "PhotoPath": "Images/AliceJohnson.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar3.jpg",
       "Level": "Junior",
-      "ResumeLink": "Resumes/AliceJohnson.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
     },
     {
       "Id": 4,
       "FullName": "Bob Brown",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Applied",
       "PhoneNumber": "\u002B380503334455",
-      "PhotoPath": "Images/BobBrown.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar4.jpg",
       "Level": "Senior",
-      "ResumeLink": "Resumes/BobBrown.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
     },
     {
       "Id": 5,
       "FullName": "Emily Davis",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Interview",
       "PhoneNumber": "\u002B380504556677",
-      "PhotoPath": "Images/EmilyDavis.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar5.jpg",
       "Level": "Middle",
-      "ResumeLink": "Resumes/EmilyDavis.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
     },
     {
       "Id": 6,
       "FullName": "Michael Wilson",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Technical",
       "PhoneNumber": "\u002B380505667788",
-      "PhotoPath": "Images/MichaelWilson.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar6.jpg",
       "Level": "Junior",
-      "ResumeLink": "Resumes/MichaelWilson.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
     },
     {
       "Id": 7,
       "FullName": "Olivia Taylor",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Applied",
       "PhoneNumber": "\u002B380506778899",
-      "PhotoPath": "Images/OliviaTaylor.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar7.jpg",
       "Level": "Middle",
-      "ResumeLink": "Resumes/OliviaTaylor.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
     },
     {
       "Id": 8,
       "FullName": "William Moore",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Interview",
       "PhoneNumber": "\u002B380507889900",
-      "PhotoPath": "Images/WilliamMoore.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar8.jpg",
       "Level": "Senior",
-      "ResumeLink": "Resumes/WilliamMoore.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
     },
     {
       "Id": 9,
       "FullName": "Sophia Anderson",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Technical",
       "PhoneNumber": "\u002B380508990011",
-      "PhotoPath": "Images/SophiaAnderson.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar9.jpg",
       "Level": "Junior",
-      "ResumeLink": "Resumes/SophiaAnderson.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
     },
     {
       "Id": 10,
       "FullName": "James Thomas",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Applied",
       "PhoneNumber": "\u002B380509001122",
-      "PhotoPath": "Images/JamesThomas.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar10.jpg",
       "Level": "Middle",
-      "ResumeLink": "Resumes/JamesThomas.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
     },
     {
       "Id": 11,
       "FullName": "Mark Spencer",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Applied",
       "PhoneNumber": "\u002B380501112233",
-      "PhotoPath": "Images/MarkSpencer.png",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar10.jpg",
       "Level": "Junior",
-      "ResumeLink": "Resumes/MarkSpencer.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
     },
     {
       "Id": 12,
       "FullName": "Linda Roberts",
+      "GitHub": null,
+      "LinkedIn": null,
       "Status": "Interview",
       "PhoneNumber": "\u002B380501122334",
-      "PhotoPath": "Images/LindaRoberts.png",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar2.jpg",
       "Level": "Junior",
-      "ResumeLink": "Resumes/LindaRoberts.pdf"
+      "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
     }
   ],
   "Vacancies": [
@@ -115,25 +139,29 @@
       "Title": "Software Engineer",
       "Technologies": "C#, .NET, WPF",
       "Department": "Development",
-      "Status": "InProgress",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 1,
           "FullName": "John Doe",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Applied",
           "PhoneNumber": "\u002B380501234567",
-          "PhotoPath": "Images/JohnDoe.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar3.jpg",
           "Level": "Junior",
-          "ResumeLink": "Resumes/JohnDoe.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
         },
         {
           "Id": 3,
           "FullName": "Alice Johnson",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Technical",
           "PhoneNumber": "\u002B380509876543",
-          "PhotoPath": "Images/AliceJohnson.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar4.jpg",
           "Level": "Junior",
-          "ResumeLink": "Resumes/AliceJohnson.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
         }
       ]
     },
@@ -142,16 +170,18 @@
       "Title": "HR Manager",
       "Technologies": "Recruiting, Interviews",
       "Department": "HR",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 2,
           "FullName": "Jane Smith",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Interview",
           "PhoneNumber": "\u002B380501112233",
-          "PhotoPath": "Images/JaneSmith.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar5.jpg",
           "Level": "Middle",
-          "ResumeLink": "Resumes/JaneSmith.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
         }
       ]
     },
@@ -160,16 +190,18 @@
       "Title": "UX Designer",
       "Technologies": "Figma, Adobe XD",
       "Department": "Design",
-      "Status": "InProgress",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 5,
           "FullName": "Emily Davis",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Interview",
           "PhoneNumber": "\u002B380504556677",
-          "PhotoPath": "Images/EmilyDavis.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar6.jpg",
           "Level": "Middle",
-          "ResumeLink": "Resumes/EmilyDavis.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
         }
       ]
     },
@@ -178,16 +210,18 @@
       "Title": "DevOps Engineer",
       "Technologies": "AWS, Docker, CI/CD",
       "Department": "Infrastructure",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 6,
           "FullName": "Michael Wilson",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Technical",
           "PhoneNumber": "\u002B380505667788",
-          "PhotoPath": "Images/MichaelWilson.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar7.jpg",
           "Level": "Junior",
-          "ResumeLink": "Resumes/MichaelWilson.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
         }
       ]
     },
@@ -201,11 +235,13 @@
         {
           "Id": 4,
           "FullName": "Bob Brown",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Applied",
           "PhoneNumber": "\u002B380503334455",
-          "PhotoPath": "Images/BobBrown.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar8.jpg",
           "Level": "Senior",
-          "ResumeLink": "Resumes/BobBrown.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
         }
       ]
     },
@@ -214,25 +250,29 @@
       "Title": "QA Engineer",
       "Technologies": "Selenium, C#",
       "Department": "QA",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 7,
           "FullName": "Olivia Taylor",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Applied",
           "PhoneNumber": "\u002B380506778899",
-          "PhotoPath": "Images/OliviaTaylor.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar9.jpg",
           "Level": "Middle",
-          "ResumeLink": "Resumes/OliviaTaylor.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
         },
         {
           "Id": 11,
           "FullName": "Mark Spencer",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Applied",
           "PhoneNumber": "\u002B380501112233",
-          "PhotoPath": "Images/MarkSpencer.png",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar10.jpg",
           "Level": "Junior",
-          "ResumeLink": "Resumes/MarkSpencer.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
         }
       ]
     },
@@ -246,20 +286,24 @@
         {
           "Id": 8,
           "FullName": "William Moore",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Interview",
           "PhoneNumber": "\u002B380507889900",
-          "PhotoPath": "Images/WilliamMoore.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar4.jpg",
           "Level": "Senior",
-          "ResumeLink": "Resumes/WilliamMoore.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
         },
         {
           "Id": 12,
           "FullName": "Linda Roberts",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Interview",
           "PhoneNumber": "\u002B380501122334",
-          "PhotoPath": "Images/LindaRoberts.png",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar3.jpg",
           "Level": "Junior",
-          "ResumeLink": "Resumes/LindaRoberts.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
         }
       ]
     },
@@ -273,11 +317,13 @@
         {
           "Id": 9,
           "FullName": "Sophia Anderson",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Technical",
           "PhoneNumber": "\u002B380508990011",
-          "PhotoPath": "Images/SophiaAnderson.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar2.jpg",
           "Level": "Junior",
-          "ResumeLink": "Resumes/SophiaAnderson.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
         }
       ]
     },
@@ -291,11 +337,13 @@
         {
           "Id": 10,
           "FullName": "James Thomas",
+          "GitHub": null,
+          "LinkedIn": null,
           "Status": "Applied",
           "PhoneNumber": "\u002B380509001122",
-          "PhotoPath": "Images/JamesThomas.jpg",
+          "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar1.jpg",
           "Level": "Middle",
-          "ResumeLink": "Resumes/JamesThomas.pdf"
+          "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
         }
       ]
     },

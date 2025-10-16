@@ -23,11 +23,5 @@ namespace Hirely.UI.Views
             InitializeComponent();
         }
 
-        private void BtnAddVacancy_Click(object sender, RoutedEventArgs e)
-        {
-            // Поки просто повідомлення для перевірки
-            MessageBox.Show("Тут буде форма для додавання вакансії");
-        }
-
     }
 }

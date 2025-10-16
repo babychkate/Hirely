@@ -7,6 +7,8 @@ namespace Hirely.Model.Models
         public int Id { get; set; }
         public string FullName { get; set; }
 
+        public string GitHub { get; set; }
+        public string LinkedIn { get; set; }
         // Статус кандидата
         public string Status { get; set; }
 
