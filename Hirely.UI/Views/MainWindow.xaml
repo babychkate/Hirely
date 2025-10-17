@@ -19,27 +19,20 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
-            <!-- Ліва панель -->
             <ColumnDefinition Width="*"/>
-            <!-- Права частина -->
         </Grid.ColumnDefinitions>
 
-        <!-- Ліва панель -->
         <Grid Grid.Column="0" Background="#5E00FF">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <!-- Верхні кнопки та заголовок -->
                 <RowDefinition Height="*"/>
-                <!-- Простір для розтягування -->
                 <RowDefinition Height="Auto"/>
-                <!-- Панель прогресу -->
             </Grid.RowDefinitions>
 
             <local:OpenVacanciesCounterUserControl Grid.Row="2"
         OpenVacanciesCount="{Binding OpenVacanciesCount}" 
         Margin="0,10"/>
 
-            <!-- Верхні кнопки -->
             <StackPanel Grid.Row="0" Margin="0,10,0,0">
                 <TextBlock Text="Hirely" Margin="10" VerticalAlignment="Center" Foreground="White" FontSize="20" FontWeight="Bold"/>
                 <Button Width="120" Height="30" Content="Vacancies" Command="{Binding ShowVacanciesCommand}" Margin="5"/>
@@ -47,7 +40,6 @@
             </StackPanel>
         </Grid>
 
-        <!-- Права частина -->
         <Grid Grid.Column="1" Margin="10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -56,12 +48,9 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <!-- Панель кнопок -->
                 <RowDefinition Height="*"/>
-                <!-- UserControl / DataGrid -->
             </Grid.RowDefinitions>
 
-            <!-- Панель кнопок -->
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Margin="0,0,0,5">
                 <Button Content="Open Vacancy" Width="120" Height="30"
                         Command="{Binding OpenVacancyCommand}"
@@ -70,19 +59,16 @@
                         Command="{Binding CloseVacancyCommand}"/>
             </StackPanel>
 
-            <!-- DataGrid для вакансій -->
             <local:VacanciesUserControl Grid.Row="1" 
                                         Vacancies="{Binding Vacancies}" 
                                         SelectedVacancy="{Binding SelectedItem, Mode=TwoWay}" 
                                         Visibility="{Binding CurrentTab, Converter={StaticResource TabToVisibilityConverter}, ConverterParameter=Vacancies}"/>
 
-            <!-- DataGrid для кандидатів -->
             <local:CandidatesUserControl Grid.Row="1" 
                                          Candidates="{Binding Candidates}" 
                                          SelectedCandidate="{Binding SelectedItem, Mode=TwoWay}" 
                                          Visibility="{Binding CurrentTab, Converter={StaticResource TabToVisibilityConverter}, ConverterParameter=Candidates}"/>
 
-            <!-- Панель деталей -->
             <Border Grid.Column="1" Grid.RowSpan="2" Background="#F0F0F0" Padding="10" CornerRadius="5"
                     Visibility="{Binding IsDetailVisible, Converter={StaticResource BoolToVisibilityConverter}}">
                 <ContentControl Content="{Binding SelectedItem}">
