@@ -139,7 +139,7 @@
       "Title": "Software Engineer",
       "Technologies": "C#, .NET, WPF",
       "Department": "Development",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 1,
@@ -190,7 +190,7 @@
       "Title": "UX Designer",
       "Technologies": "Figma, Adobe XD",
       "Department": "Design",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 5,
@@ -230,7 +230,7 @@
       "Title": "Product Manager",
       "Technologies": "Agile, Scrum",
       "Department": "Product",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 4,
@@ -250,7 +250,7 @@
       "Title": "QA Engineer",
       "Technologies": "Selenium, C#",
       "Department": "QA",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 7,
@@ -332,7 +332,7 @@
       "Title": "Business Analyst",
       "Technologies": "Business Analysis, BPM",
       "Department": "Product",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 10,

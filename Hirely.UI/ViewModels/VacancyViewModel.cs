@@ -4,6 +4,8 @@ namespace Hirely.UI.ViewModels
 {
     public class VacancyViewModel : ViewModelBase
     {
+        public ObservableCollection<CandidateViewModel> Candidates { get; set; }
+        public int CandidateCount => Candidates?.Count ?? 0;
         public VacancyViewModel()
         {
             Candidates = new ObservableCollection<CandidateViewModel>();
@@ -78,16 +80,10 @@ namespace Hirely.UI.ViewModels
                 }
             }
         }
-
-        public ObservableCollection<CandidateViewModel> Candidates { get; set; }
-
-        public int CandidateCount => Candidates?.Count ?? 0;
-
         public void RefreshCandidates()
         {
             OnPropertyChanged(nameof(Candidates));
             OnPropertyChanged(nameof(CandidateCount));
         }
     }
-
 }
