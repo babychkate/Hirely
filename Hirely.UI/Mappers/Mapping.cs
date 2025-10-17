@@ -1,12 +1,7 @@
 ﻿using Hirely.Model.Models;
 using Hirely.UI.ViewModels;
 using Mapster;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Hirely.UI.Mappers
 {
@@ -14,7 +9,6 @@ namespace Hirely.UI.Mappers
     {
         public static void Configure()
         {
-            // Кандидат
             TypeAdapterConfig<Candidate, CandidateViewModel>
                 .NewConfig()
                 .Map(dest => dest.Id, src => src.Id)
@@ -37,7 +31,6 @@ namespace Hirely.UI.Mappers
                 .Map(dest => dest.ResumeLink, src => src.ResumeLink)
                 .ConstructUsing(src => new Candidate());
 
-            // Вакансія
             TypeAdapterConfig<Vacancy, VacancyViewModel>
                 .NewConfig()
                 .Map(dest => dest.Id, src => src.Id)
@@ -45,7 +38,6 @@ namespace Hirely.UI.Mappers
                 .Map(dest => dest.Technologies, src => src.Technologies)
                 .Map(dest => dest.Department, src => src.Department)
                 .Map(dest => dest.Status, src => src.Status)
-                // Мапимо список кандидатів у ObservableCollection
                 .Map(dest => dest.Candidates,
                      src => src.Candidates == null
                         ? new ObservableCollection<CandidateViewModel>()
