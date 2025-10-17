@@ -170,7 +170,7 @@
       "Title": "HR Manager",
       "Technologies": "Recruiting, Interviews",
       "Department": "HR",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 2,
@@ -210,7 +210,7 @@
       "Title": "DevOps Engineer",
       "Technologies": "AWS, Docker, CI/CD",
       "Department": "Infrastructure",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 6,
@@ -281,7 +281,7 @@
       "Title": "Marketing Specialist",
       "Technologies": "SEO, SMM",
       "Department": "Marketing",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 8,
@@ -312,7 +312,7 @@
       "Title": "Data Analyst",
       "Technologies": "SQL, Python, Excel",
       "Department": "Analytics",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 9,

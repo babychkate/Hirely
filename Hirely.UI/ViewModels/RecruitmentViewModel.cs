@@ -1,17 +1,13 @@
 ﻿using Hirely.Model.Models;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 
 namespace Hirely.UI.ViewModels
 {
     public class RecruitmentViewModel : ViewModelBase
     {
-        // Колекції
         public ObservableCollection<CandidateViewModel> Candidates { get; set; } = new ObservableCollection<CandidateViewModel>();
         public ObservableCollection<VacancyViewModel> Vacancies { get; set; } = new ObservableCollection<VacancyViewModel>();
 
-        // Вибраний елемент (Vacancy або Candidate)
         private object _selectedItem;
         public object SelectedItem
         {
@@ -19,10 +15,13 @@ namespace Hirely.UI.ViewModels
             set
             {
                 _selectedItem = value;
+
                 OnPropertyChanged(nameof(SelectedItem));
                 OnPropertyChanged(nameof(IsVacancyToClose));
                 OnPropertyChanged(nameof(IsVacancyToOpen));
+
                 IsDetailVisible = _selectedItem != null;
+
                 OpenVacancyCommand.RaiseCanExecuteChanged();
                 CloseVacancyCommand.RaiseCanExecuteChanged();
             }
@@ -41,7 +40,6 @@ namespace Hirely.UI.ViewModels
             }
         }
 
-        // Видимість панелі деталей
         private bool _isDetailVisible;
         public bool IsDetailVisible
         {
@@ -53,40 +51,40 @@ namespace Hirely.UI.ViewModels
             }
         }
 
-        // Нова властивість для підрахунку незакритих вакансій
-        public int OpenVacanciesCount =>
-            Vacancies.Count(v => v.Status != VacancyStatus.Closed.ToString());
-
-        // Чи вибрана вакансія (для кнопки)
+        public int OpenVacanciesCount => Vacancies.Count(v => v.Status != VacancyStatus.Closed.ToString());
         public bool IsVacancyToClose => SelectedItem is VacancyViewModel v && v.Status != VacancyStatus.Closed.ToString();
+        public bool IsVacancyToOpen => SelectedItem is VacancyViewModel v && v.Status == VacancyStatus.Closed.ToString();
 
-        // Закрити вакансію
         private Command _closeVacancyCommand;
         public Command CloseVacancyCommand => _closeVacancyCommand ??= new Command(
             () =>
             {
                 if (SelectedItem is VacancyViewModel vacancy)
                     vacancy.Status = VacancyStatus.Closed.ToString();
+
+                OpenVacancyCommand.RaiseCanExecuteChanged();
+                CloseVacancyCommand.RaiseCanExecuteChanged();
+
                 OnPropertyChanged(nameof(OpenVacanciesCount));
             },
             () => IsVacancyToClose
         );
 
-        public bool IsVacancyToOpen => SelectedItem is VacancyViewModel v && v.Status == VacancyStatus.Closed.ToString();
-
-        // Закрити вакансію
         private Command _openVacancyCommand;
         public Command OpenVacancyCommand => _openVacancyCommand ??= new Command(
             () =>
             {
                 if (SelectedItem is VacancyViewModel vacancy)
-                    vacancy.Status = "Open";
+                    vacancy.Status = VacancyStatus.Open.ToString();
+
+                OpenVacancyCommand.RaiseCanExecuteChanged();
+                CloseVacancyCommand.RaiseCanExecuteChanged();
+
                 OnPropertyChanged(nameof(OpenVacanciesCount));
             },
             () => IsVacancyToOpen
         );
 
-        // Табс
         public enum TabType { Vacancies, Candidates }
 
         private TabType _currentTab = TabType.Vacancies;
@@ -98,15 +96,13 @@ namespace Hirely.UI.ViewModels
                 _currentTab = value;
                 OnPropertyChanged(nameof(CurrentTab));
                 OnPropertyChanged(nameof(CurrentItems));
-                SelectedItem = null; // Очистити вибір при перемиканні табів
+                SelectedItem = null;
             }
         }
 
-        // Текущі елементи для DataGrid (Vacancies або Candidates)
         public IEnumerable<object> CurrentItems =>
             CurrentTab == TabType.Vacancies ? Vacancies : Candidates;
 
-        // Команди перемикання табів
         private Command _showVacanciesCommand;
         public Command ShowVacanciesCommand => _showVacanciesCommand ??= new Command(
             () => CurrentTab = TabType.Vacancies
