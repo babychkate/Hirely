@@ -9,14 +9,12 @@ namespace Hirely.UI.Views
         {
             InitializeComponent();
         }
-
-        // --- Dependency Property: OpenVacanciesCount ---
         public static readonly DependencyProperty OpenVacanciesCountProperty =
             DependencyProperty.Register(
                 "OpenVacanciesCount",
                 typeof(int),
                 typeof(OpenVacanciesCounterUserControl),
-                new PropertyMetadata(0)); // Значення за замовчуванням
+                new PropertyMetadata(0));
 
         public int OpenVacanciesCount
         {
