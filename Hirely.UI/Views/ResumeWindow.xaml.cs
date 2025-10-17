@@ -11,7 +11,6 @@ namespace Hirely.UI.Views
 
             if (!string.IsNullOrEmpty(resumePath) && File.Exists(resumePath))
             {
-                // Перетворюємо шлях у формат URI, щоб WebBrowser міг відкрити локальний файл
                 var uri = new System.Uri(resumePath, System.UriKind.Absolute);
                 PdfBrowser.Navigate(uri);
             }
