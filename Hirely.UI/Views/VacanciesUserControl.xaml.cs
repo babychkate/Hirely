@@ -1,20 +1,20 @@
 ﻿using Hirely.UI.ViewModels;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 
 namespace Hirely.UI.Views
 {
-    public partial class VacanciesUserControl : UserControl, INotifyPropertyChanged
+    public partial class VacanciesUserControl : UserControl
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string name) =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-
         public VacanciesUserControl()
         {
             InitializeComponent();
+        }
+        public ObservableCollection<VacancyViewModel> Vacancies
+        {
+            get => (ObservableCollection<VacancyViewModel>)GetValue(VacanciesProperty);
+            set => SetValue(VacanciesProperty, value);
         }
 
         public static readonly DependencyProperty VacanciesProperty =
@@ -22,11 +22,10 @@ namespace Hirely.UI.Views
                 typeof(ObservableCollection<VacancyViewModel>),
                 typeof(VacanciesUserControl),
                 new PropertyMetadata(null));
-
-        public ObservableCollection<VacancyViewModel> Vacancies
+        public VacancyViewModel SelectedVacancy
         {
-            get => (ObservableCollection<VacancyViewModel>)GetValue(VacanciesProperty);
-            set => SetValue(VacanciesProperty, value);
+            get => (VacancyViewModel)GetValue(SelectedVacancyProperty);
+            set => SetValue(SelectedVacancyProperty, value);
         }
 
         public static readonly DependencyProperty SelectedVacancyProperty =
@@ -35,17 +34,5 @@ namespace Hirely.UI.Views
                 typeof(VacanciesUserControl),
                 new PropertyMetadata(null));
 
-        public VacancyViewModel SelectedVacancy
-        {
-            get => (VacancyViewModel)GetValue(SelectedVacancyProperty);
-            set
-            {
-                SetValue(SelectedVacancyProperty, value);
-                OnPropertyChanged(nameof(SelectedVacancy));
-                SelectedVacancyChanged?.Invoke(this, value);
-            }
-        }
-
-        public event EventHandler<VacancyViewModel> SelectedVacancyChanged;
     }
 }

@@ -14,6 +14,5 @@
                 <DataGridTextColumn Header="Candidates" Binding="{Binding CandidateCount}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-
     </Grid>
 </UserControl>
