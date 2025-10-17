@@ -8,7 +8,7 @@ namespace Hirely.Model.Models
         public string Title { get; set; } = string.Empty;
         public string Technologies { get; set; } = string.Empty;
         public string Department { get; set; } = string.Empty;
-        public string Status { get; set; } = VacancyStatus.New.ToString();
+        public string Status { get; set; } = VacancyStatus.Open.ToString();
 
         public IEnumerable<Candidate> Candidates { get; set; } = new List<Candidate>();
     }
@@ -18,6 +18,6 @@ namespace Hirely.Model.Models
         Urgent,
         Closed,
         InProgress,
-        New
+        Open
     }
 }
