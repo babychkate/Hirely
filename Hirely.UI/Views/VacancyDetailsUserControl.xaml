@@ -6,12 +6,9 @@
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Дані вакансії -->
             <RowDefinition Height="*"/>
-            <!-- Список кандидатів -->
         </Grid.RowDefinitions>
 
-        <!-- Інформація про вакансію -->
         <StackPanel Grid.Row="0" Margin="0,0,0,10">
             <TextBlock Text="Title:" FontWeight="Bold"/>
             <TextBlock Text="{Binding Title}" Margin="0,0,0,5"/>
@@ -29,7 +26,6 @@
             <TextBlock Text="{Binding CandidateCount}" Margin="0,0,0,5"/>
         </StackPanel>
 
-        <!-- Список кандидатів -->
         <DataGrid Grid.Row="1" ItemsSource="{Binding Candidates}" AutoGenerateColumns="False"
           CanUserAddRows="False" IsReadOnly="True"
           MaxHeight="300" Width="320"
