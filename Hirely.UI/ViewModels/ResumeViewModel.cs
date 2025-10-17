@@ -1,17 +1,15 @@
-﻿using System.ComponentModel;
+﻿using Hirely.UI.ViewModels;
 
-public class ResumeViewModel : INotifyPropertyChanged
+public class ResumeViewModel : ViewModelBase
 {
-    private string _resumePath;
+    private string _resumePath = "";
     public string ResumePath
     {
         get => _resumePath;
         set
         {
             _resumePath = value;
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResumePath)));
+            OnPropertyChanged(nameof(ResumePath));
         }
     }
-
-    public event PropertyChangedEventHandler PropertyChanged;
 }
