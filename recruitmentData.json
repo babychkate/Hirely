@@ -170,7 +170,7 @@
       "Title": "HR Manager",
       "Technologies": "Recruiting, Interviews",
       "Department": "HR",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 2,
@@ -190,7 +190,7 @@
       "Title": "UX Designer",
       "Technologies": "Figma, Adobe XD",
       "Department": "Design",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 5,
@@ -332,7 +332,7 @@
       "Title": "Business Analyst",
       "Technologies": "Business Analysis, BPM",
       "Department": "Product",
-      "Status": "InProgress",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 10,
