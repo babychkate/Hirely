@@ -5,8 +5,6 @@ using Hirely.UI.ViewModels;
 using Hirely.UI.Views;
 using Mapster;
 using System.Collections.ObjectModel;
-using System.Configuration;
-using System.Data;
 using System.Windows;
 
 namespace Hirely.UI;
@@ -16,7 +14,7 @@ namespace Hirely.UI;
 /// </summary>
 public partial class App : Application
 {
-    private RecruitmentViewModel _viewModel;
+    private readonly RecruitmentViewModel _viewModel;
 
     public App()
     {
@@ -39,7 +37,6 @@ public partial class App : Application
 
         this.Exit += (s, e) =>
         {
-
             recruitmentModel.Candidates = _viewModel.Candidates.Adapt<ObservableCollection<Candidate>>();
             recruitmentModel.Vacancies = _viewModel.Vacancies.Adapt<ObservableCollection<Vacancy>>();
 
