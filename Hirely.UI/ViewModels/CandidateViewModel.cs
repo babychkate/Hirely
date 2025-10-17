@@ -1,11 +1,15 @@
 ﻿using Hirely.UI.Views;
-using System;
 using System.Windows.Input;
 
 namespace Hirely.UI.ViewModels
 {
     public class CandidateViewModel : ViewModelBase
     {
+        public CandidateViewModel()
+        {
+            ViewResumeCommand = new Command(OpenResume, CanOpenResume);
+        }
+
         private int _id;
         public int Id
         {
@@ -48,7 +52,6 @@ namespace Hirely.UI.ViewModels
             }
         }
 
-        // Нові поля
         private string _phoneNumber = string.Empty;
         public string PhoneNumber
         {
@@ -104,19 +107,13 @@ namespace Hirely.UI.ViewModels
                 }
             }
         }
-
+        
         public ICommand ViewResumeCommand { get; }
-
-        public CandidateViewModel()
-        {
-            ViewResumeCommand = new Command(OpenResume, CanOpenResume);
-        }
 
         private void OpenResume()
         {
             if (!string.IsNullOrEmpty(ResumeLink))
             {
-                // Відкриваємо нове вікно для перегляду PDF
                 var resumeWindow = new ResumeWindow(ResumeLink);
                 resumeWindow.Show();
             }
@@ -124,19 +121,7 @@ namespace Hirely.UI.ViewModels
 
         private bool CanOpenResume()
         {
-            // Команда доступна, якщо ResumeLink не порожній
             return !string.IsNullOrEmpty(ResumeLink);
-        }
-
-        public CandidateViewModel(Hirely.Model.Models.Candidate model)
-        {
-            Id = model.Id;
-            FullName = model.FullName;
-            Status = model.Status;
-            PhoneNumber = model.PhoneNumber;
-            PhotoPath = model.PhotoPath;
-            Level = model.Level;
-            ResumeLink = model.ResumeLink;
         }
     }
 }
