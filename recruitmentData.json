@@ -62,7 +62,7 @@
       "LinkedIn": null,
       "Status": "Technical",
       "PhoneNumber": "\u002B380505667788",
-      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar6.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar9.jpg",
       "Level": "Junior",
       "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume1.pdf"
     },
@@ -95,7 +95,7 @@
       "LinkedIn": null,
       "Status": "Technical",
       "PhoneNumber": "\u002B380508990011",
-      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar9.jpg",
+      "PhotoPath": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\avatar6.jpg",
       "Level": "Junior",
       "ResumeLink": "C:\\Users\\Kateryna\\Desktop\\\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u044E\u0432\u0430\u043D\u043D\u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043D\u043E\u0433\u043E \u0437\u0430\u0431\u0435\u0437\u043F\u0435\u0447\u0435\u043D\u043D\u044F\\Hirely\\Hirely\\Data\\resume3.pdf"
     },
@@ -170,7 +170,7 @@
       "Title": "HR Manager",
       "Technologies": "Recruiting, Interviews",
       "Department": "HR",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 2,
@@ -190,7 +190,7 @@
       "Title": "UX Designer",
       "Technologies": "Figma, Adobe XD",
       "Department": "Design",
-      "Status": "Open",
+      "Status": "Closed",
       "Candidates": [
         {
           "Id": 5,
@@ -230,7 +230,7 @@
       "Title": "Product Manager",
       "Technologies": "Agile, Scrum",
       "Department": "Product",
-      "Status": "Closed",
+      "Status": "Open",
       "Candidates": [
         {
           "Id": 4,
