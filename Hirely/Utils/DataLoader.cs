@@ -7,14 +7,30 @@ namespace Hirely.Model.Utils
     {
         private readonly string _filePath;
 
-        public DataLoader(string filePath = @"C:\Users\Kateryna\Desktop\Конструювання програмного забезпечення\Hirely\recruitmentData.json")
+        public DataLoader(string filePath = null)
         {
-            _filePath = filePath;
+            _filePath = filePath ?? Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "recruitmentData.json");
         }
 
         public RecruitmentModel LoadData()
         {
-            return DataSerializer.DeserializeData(_filePath);
+            var data = DataSerializer.DeserializeData(_filePath);
+            var basePath = AppDomain.CurrentDomain.BaseDirectory;
+
+            foreach (var c in data.Candidates ?? [])
+            {
+                c.PhotoPath = Path.Combine(basePath, c.PhotoPath);
+                c.ResumeLink = Path.Combine(basePath, c.ResumeLink);
+            }
+
+            foreach (var v in data.Vacancies ?? [])
+                foreach (var c in v.Candidates ?? [])
+                {
+                    c.PhotoPath = Path.Combine(basePath, c.PhotoPath);
+                    c.ResumeLink = Path.Combine(basePath, c.ResumeLink);
+                }
+
+            return data;
         }
 
         public void SaveData(RecruitmentModel data)
