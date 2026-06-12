@@ -48,15 +48,16 @@ The app also includes a **status indicator**, providing a quick overview of open
 ## Screenshots / Demo
 
 ### Main page
-![Vacancies List](screenshots/main_screen.bmp)
+<img width="1297" height="705" alt="image" src="https://github.com/user-attachments/assets/9da3094c-52e4-4fe7-a72e-85dbb9f85d00" />
 
 ### Vacancies list
-![Candidates List](screenshots/vacancies.bmp)
+<img width="1294" height="700" alt="image" src="https://github.com/user-attachments/assets/0f11339f-10e6-434e-a2f1-45b59ec24475" />
+
 
 ### Candidates list
-![Resume Viewer](screenshots/candidates.bmp)
+<img width="1293" height="704" alt="image" src="https://github.com/user-attachments/assets/161835e3-5ad1-4fc5-ac6f-6fd3da9a0089" />
 
 ### Resume Viewer
-![Status Indicator](screenshots/resume.bmp)
+<img width="1292" height="705" alt="image" src="https://github.com/user-attachments/assets/ae54301d-cdaf-48d5-9ec8-75f3b645882f" />
 
 > **Note:** All images are for demonstration purposes and are not owned by the project author.
